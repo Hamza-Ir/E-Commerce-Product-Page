@@ -1,0 +1,222 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+nav button {
+  background-color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.product-display {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card h2 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.product-card p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.product-card input {
+  width: 50px;
+  text-align: center;
+  margin-right: 1em;
+}
+
+.product-card button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #218838;
+}
+
+.cart-section {
+  display: none;
+  padding: 1em;
+  margin: 2em auto;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-section.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+/* Style for the cart button */
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.cart-btn i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Hover effect */
+.cart-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Active button effect */
+.cart-btn:active {
+  background-color: #003f7f;
+}
+
+/* Styling for the cart count */
+.cart-btn #cart-count {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Responsive size */
+@media (max-width: 768px) {
+  .cart-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Product Price Section styles */
+.product-price-section {
+  text-align: center;
+}
+
+.product-price-section .price-label {
+  font-weight: bold;
+}
+
+.product-price-section .price-value {
+  font-size: 18px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Slightly darker background for more contrast */
+  backdrop-filter: blur(5px); /* Blur effect for background */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Smooth transition for modal visibility */
+  opacity: 0;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for modal content */
+  transform: translateY(-20px); /* Start slightly above the viewport */
+  opacity: 0;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0); /* Slide into view */
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Close button color */
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #e60023; /* Color change on hover */
+}
+
+#cart-items {
+  margin-bottom: 1em;
+}
+
+#cart-items div {
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#checkout {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+#checkout:hover {
+  background-color: #0056b3;
+}
